@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('/fonts/otf/Exo2.0-Thin.otf') format("opentype");
+}
+
 .app {
     background-repeat: repeat;
     min-width: 100vw;
@@ -19,7 +25,7 @@
     }
 
     .app-title { 
-        font-family: 'Exo2';
+        font-family: 'Exo2', sans-serif;
         color: #fff;
         font-size: 36px;
         z-index: 5;
