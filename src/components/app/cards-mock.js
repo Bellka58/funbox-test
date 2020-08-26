@@ -1,0 +1,38 @@
+export const cards = [
+  {
+    description: "Сказочное заморское яство",
+    name: "Нямушка",
+    taste: "с фуа-гра",
+    portionsCount: 10,
+    presentCount: 1,
+    additionalInfo: '',
+    weight: '0,5',
+    footerText: 'Печень утки разварная с артишоками.',
+    outOfStockText: 'Печалька, с фуа-гра закончился.',
+    availability: true,
+  },
+  {
+    description: "Сказочное заморское яство",
+    name: "Нямушка",
+    taste: "с рыбой",
+    portionsCount: 40,
+    presentCount: 2,
+    additionalInfo: '',
+    weight: '2',
+    footerText: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
+    outOfStockText: 'Печалька, с рыбой закончился.',
+    availability: true,
+  },
+  {
+    description: "Сказочное заморское яство",
+    name: "Нямушка",
+    taste: "с курой",
+    portionsCount: 100,
+    presentCount: 5,
+    additionalInfo: 'заказчик доволен',
+    weight: '5',
+    footerText: 'Филе из цыплят с трюфелями в бульоне.',
+    outOfStockText: 'Печалька, с курой закончился.',
+    availability: false,
+  }
+];

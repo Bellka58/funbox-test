@@ -1,0 +1,40 @@
+.app {
+    background-repeat: repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+
+    .app-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg,rgba(0,0,0,.7) 0,hsla(0,0%,88.2%,.1) 50%,rgba(0,0,0,.7));
+        background-image: -webkit-linear-gradient(90deg,rgba(0,0,0,.7) 0,hsla(0,0%,88.2%,.1) 50%,rgba(0,0,0,.7));
+    }
+
+    .app-title { 
+        font-family: 'Exo2';
+        color: #fff;
+        font-size: 36px;
+        z-index: 5;
+        margin-top: 36px;
+        margin-bottom: 26px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    .cards-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+}

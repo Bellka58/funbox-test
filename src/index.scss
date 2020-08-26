@@ -1,0 +1,31 @@
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('/fonts/otf/Exo2.0-Thin.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('/fonts/ttf/Trebuchet-MS.ttf') format("opentype");
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Exo2', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}

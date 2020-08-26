@@ -1,0 +1,209 @@
+$default-border-color: #1698D9;
+$default-border-hover-color: #2EA8E6;
+$selected-border-color: #D91667;
+$selected-border-hover-color: #E52E7A;
+$disabled-border-color: #B3B3B3;
+
+$disabled-footer-color: #FEFF3D;
+$default-footer-highlight: #009ADF;
+$default-footer-highlight-hover: #00A9EF;
+
+.item-card {
+    z-index: 5;
+
+    &__main {
+
+        &.default {
+            border-color: $default-border-color;
+            .weigth {
+                background-color: $default-border-color;
+            }
+            .triangle {
+                background-color: $default-border-color;
+            }
+            &.hovered {
+                border-color: $default-border-hover-color;
+                .weigth {
+                    background-color: $default-border-hover-color;
+                }
+                .triangle {
+                    background-color: $default-border-hover-color;
+                }
+            }
+        }
+
+        &.selected {
+            border-color: $selected-border-color;
+            .weigth {
+                background-color: $selected-border-color;
+            }
+            .triangle {
+                background-color: $selected-border-color;
+            }
+            &.hovered {
+                border-color: $selected-border-hover-color;
+                .weigth {
+                    background-color: $selected-border-hover-color;
+                }
+                .triangle {
+                    background-color: $selected-border-hover-color;
+                }
+            }
+        }
+
+        &.disabled {
+            cursor: default;
+            border-color: $disabled-border-color;
+            background-color: #F2F2F2;
+            .weigth {
+                background-color: $disabled-border-color;
+            }
+            .triangle {
+                background-color: $disabled-border-color;
+            }
+            .cat {
+                opacity: 0.5;
+            }
+        }
+
+        clip-path: polygon(43px 0,100% 0,100% 100%,0 100%,0 43px);
+        width: 320px;
+        height: 480px;
+        border-radius: 12px;
+        border-top-left-radius: 0;
+        background-color: #f2f2f2;
+        border: 4px solid;
+        padding-left: 47px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        .triangle {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 45px;
+            height: 45px;
+            clip-path: polygon(100% 0, 100% 4px, 4px 100%, 0 100%, 0 0);
+        }
+
+        .cat {
+            width: 368px;
+            height: 360px;
+            position: absolute;
+            bottom: -92px;
+            left: -28px;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .weigth {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            right: 12px;
+            bottom: 12px;
+
+            .weight-number {
+                font-size: 42px;
+                line-height: 22px;
+                margin-top: 10px;
+            }
+
+            .weight-value {
+                font-size: 22px;
+                line-height: 22px;
+                margin-top: 8px;
+            }
+        }
+
+        .card-title {
+            .description {
+                line-height: 19px;
+                font-size: 16px;
+                color: #666;
+                margin: 17px 0 5px 0;
+
+                &.active {
+                    color: $selected-border-hover-color;
+                }
+            }
+            .name {
+                line-height: 56px;
+                font-size: 48px;
+                font-weight: bold;
+            }
+            .taste {
+                line-height: 28px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .additional {
+                color: #666;
+                line-height: 16px;
+                font-size: 14px;
+                margin-top: 15px;
+            }
+        }
+        
+        &.disabled .card-title {
+            color: #B3B3B3;
+            opacity: 0.5;
+                * {
+                color: #B3B3B3;
+            }
+        }
+    }
+
+
+    .card-footer {
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 0;
+        line-height: 15px;
+        font-size: 13px;
+        
+        .blue {
+            color: $default-footer-highlight;
+        }
+        .text-button {
+            border-bottom: 1px dashed $default-footer-highlight;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 1px solid $default-footer-highlight;
+            }
+        }
+
+        &.hovered {
+
+            .blue {
+                color: $default-footer-highlight-hover;
+            }
+            .text-button {
+                border-bottom: 1px dashed $default-footer-highlight-hover;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 1px solid $default-footer-highlight-hover;
+                }
+            }
+        }
+
+        .disabled {
+            color: $disabled-footer-color;
+        }
+    }
+}
