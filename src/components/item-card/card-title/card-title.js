@@ -2,9 +2,9 @@ import React from 'react';
 import { wordsByNumber } from '../../../utils/words';
 
 const CardTitle = ({
-    description = "",
-    name = "",
-    taste = "",
+    description = '',
+    name = '',
+    taste = '',
     portionsCount = 1,
     presentCount = 1,
     additionalInfo = '',

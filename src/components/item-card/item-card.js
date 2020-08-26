@@ -23,7 +23,12 @@ const ItemCard = ({card, isSelected = false}) => {
     availability,
   } = card || {};
 
-  const initType = availability ? isSelected ? cardType.selected : cardType.default : cardType.disabled;
+  const initType = availability ? 
+    (isSelected ?
+      cardType.selected
+      : cardType.default)
+    : cardType.disabled;
+
   const [type, setType] = useState(initType);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -34,17 +39,12 @@ const ItemCard = ({card, isSelected = false}) => {
   const handleCardClick = () => {
     setClickWithoutHover(true);
     if (type === cardType.disabled) return;
-    if (type === cardType.default) {
-      setType(cardType.selected)
-    }
-    else {
-      setType(cardType.default)
-    }
+    setType(type === cardType.default ? cardType.selected : cardType.default);
   };
 
 
   return (
-    <div className={`item-card`}>
+    <div className="item-card">
       <div
         className={`item-card__main ${type} ${isHoveredWithoutClick ? 'hovered' : ''}`}
         onMouseEnter={() => setIsHovered(true)}
@@ -54,9 +54,7 @@ const ItemCard = ({card, isSelected = false}) => {
         }}
         onClick={handleCardClick}
       >
-        <div
-          className="triangle"
-        ></div>
+        <div className="triangle" />
         <img
           className="cat"
           src={require("../../images/Photo.png")}
@@ -68,7 +66,7 @@ const ItemCard = ({card, isSelected = false}) => {
         </div>
 
         <CardTitle 
-          description={isSelectedHovered ? 'Котэ не одабряет?' : description}
+          description={isSelectedHovered ? 'Котэ не одобряет?' : description}
           name={name}
           taste={taste}
           portionsCount={portionsCount}
